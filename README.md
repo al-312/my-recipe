@@ -1,50 +1,105 @@
-# Welcome to your Expo app 👋
+# My Recipe App 🍲
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile application built with React Native and Expo that allows users to search for recipes by ingredients and view detailed recipe information.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Recipe Search**: Search for recipes by entering ingredients
+- **Recipe Listings**: Browse through recipe cards with images and basic information
+- **Detailed Recipe View**: View comprehensive recipe details including:
+  - Preparation and cooking time
+  - Servings
+  - Health score
+  - Cost per serving
+  - Dietary information
+  - Suitable occasions
+  - Ingredients list
+  - Cooking instructions
+- **User Interactions**: 
+  - Mark recipes as favorites
+  - Share recipes with friends
+  - Pull-to-refresh for updated content
+- **Responsive UI**: Modern, intuitive interface with loading states and error handling
 
+## Technologies Used
+
+- **React Native**: Core framework for building the mobile application
+- **Expo**: Development platform for React Native
+- **Expo Router**: File-based routing system
+- **Axios**: HTTP client for API requests
+- **Spoonacular API**: External API for recipe data
+- **React Navigation**: Navigation library for React Native
+- **Expo Image**: Optimized image component
+- **TypeScript**: Type-safe JavaScript
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or newer)
+- npm or yarn
+- Expo CLI
+- iOS Simulator or Android Emulator (optional)
+
+### Installation
+
+1. Clone the repository
    ```bash
-   npm install
+   git clone <repository-url>
+   cd my-recipe
    ```
 
-2. Start the app
+2. Install dependencies
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
+3. Set up environment variables
+   Create a `.env` file in the root directory with the following variables:
+   ```
+   EXPO_PUBLIC_BASE_API=https://api.spoonacular.com
+   EXPO_PUBLIC_API_KEY=your_spoonacular_api_key
+   ```
+   Note: You'll need to register for a free API key at [Spoonacular API](https://spoonacular.com/food-api)
+
+4. Start the development server
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+5. Run on a device or emulator
+   - Press `a` to run on Android emulator
+   - Press `i` to run on iOS simulator
+   - Scan the QR code with Expo Go app on your physical device
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- `app/`: Main application code with file-based routing
+  - `(home)/`: Home screen with recipe search and listing
+  - `details/`: Recipe details screen
+- `api/`: API configuration and services
+- `components/`: Reusable UI components
+- `constants/`: Application constants
+- `types/`: TypeScript type definitions
+- `assets/`: Images and other static assets
 
-## Get a fresh project
+## Usage
 
-When you're ready, run:
+1. On the home screen, tap the search icon to open the search modal
+2. Enter ingredients separated by commas
+3. View the list of recipes that match your ingredients
+4. Tap on a recipe card to view detailed information
+5. Toggle between ingredients and instructions using the tabs
+6. Mark recipes as favorites or share them using the buttons in the header
 
-```bash
-npm run reset-project
-```
+## License
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This project is licensed under the MIT License - see the LICENSE file for details
 
-## Learn more
+## Acknowledgments
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Spoonacular API](https://spoonacular.com/food-api) for providing recipe data
+- [Expo](https://expo.dev) for the development platform
+- [React Native](https://reactnative.dev) for the framework
