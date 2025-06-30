@@ -282,6 +282,7 @@ const styles = StyleSheet.create({
         padding: theme.spacing.medium,
     },
     textTitle: {
+        paddingTop:3,
         fontSize: theme.typography.h1.fontSize,
         fontWeight: '600',
         color: theme.colors.textPrimary,
